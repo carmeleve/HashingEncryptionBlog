@@ -12,6 +12,8 @@ namespace HashingEncryptionBlog
         {
             var personDictionary = new Dictionary<string, Person>();
             personDictionary.Add("Carmel", new Person("Carmel", "Eve"));
+
+            Console.WriteLine(personDictionary.ContainsKey("Carmel"));
         }
 
         private class Person
