@@ -11,15 +11,16 @@ namespace HashingEncryptionBlog
         static void Main(string[] args)
         {
             var personDictionary = new Dictionary<string, Person>();
-            personDictionary.Add("Carmel", new Person("Carmel", "Eve"));
+            var me = new Person("Carmel", "Eve");
+            personDictionary.Add(me.firstName, me);
 
             Console.WriteLine(personDictionary.ContainsKey("Carmel"));
         }
 
         private class Person
         {
-            private string firstName;
-            private string lastName;
+            public readonly string firstName;
+            public readonly string lastName;
 
             public Person(string firstName, string lastName)
             {
